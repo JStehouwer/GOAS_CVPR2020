@@ -3,7 +3,7 @@
 
 Provided is code that demonstrates the training and evaluation of the work presented in the paper: "Noise Modeling, Synthesis, and Classification for Generic Object Anti-Spoofing" published in CVPR 2020.
 
-![The proposed training framework with noise modeling](https://github.com/JStehouwer/GOAS_CVPR2020/readme_fig.png)
+![The proposed training framework with noise modeling](https://github.com/JStehouwer/GOAS_CVPR2020/blob/master/readme_fig.png)
 
 ### Project Webpage
 
