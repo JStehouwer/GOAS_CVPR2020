@@ -219,13 +219,13 @@ class GOGen(Network):
       dl_c_p_h = tf.split(dl_c_p, 2, axis=0, num=2)
       dl_m_p_h = tf.split(dl_m_p, 2, axis=0, num=2)
       gl_cc, gl_cc_p = loss_softmax(clabels_h[0], ecc)
-      gl_cc = tf.reduce_mean(gl_cc_p / (dl_c_p_h[0] + 1))
+      gl_cc = tf.reduce_mean(gl_cc_p / tf.stop_gradient(dl_c_p_h[0] + 1))
       gl_cm, gl_cm_p = loss_softmax(mlabels_h[1], ecm)
-      gl_cm = tf.reduce_mean(gl_cm_p / (dl_m_p_h[1] + 1))
+      gl_cm = tf.reduce_mean(gl_cm_p / tf.stop_gradient(dl_m_p_h[1] + 1))
       gl_mc, gl_mc_p = loss_softmax(clabels_h[1], emc)
-      gl_mc = tf.reduce_mean(gl_mc_p / (dl_c_p_h[1] + 1))
+      gl_mc = tf.reduce_mean(gl_mc_p / tf.stop_gradient(dl_c_p_h[1] + 1))
       gl_mm, gl_mm_p = loss_softmax(mlabels_h[0], emm)
-      gl_mm = tf.reduce_mean(gl_mm_p / (dl_m_p_h[0] + 1))
+      gl_mm = tf.reduce_mean(gl_mm_p / tf.stop_gradient(dl_m_p_h[0] + 1))
       
       gl_r = loss_softmax(tf.concat([tf.ones([1,1]),tf.zeros([1,1])],-1), tf.concat([erc, erm], 0))
       gl_r = (1 / 8) * gl_r[0]
