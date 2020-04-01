@@ -35,7 +35,7 @@ If you use or refer to this source code, please cite the following paper:
 
 	@inproceedings{cvpr2020-stehouwer,
 	  title={Noise Modeling, Synthesis, and Classification for Generic Object Anti-Spoofing},
-	  author={Joel Stehouwer, Yaojie Liu, Amin Jourabloo, Xiaoming Liu},
+	  author={Joel Stehouwer, Amin Jourabloo, Yaojie Liu, Xiaoming Liu},
 	  booktitle={In Proceeding of IEEE Computer Vision and Pattern Recognition (CVPR 2020)},
 	  address={Seattle, WA},
 	  year={2020}
